@@ -74,5 +74,25 @@ This document outlines a JWT-based OTP authentication mechanism for user registr
 - Ensure unique tracking of user actions (e.g., email uniqueness, `passwordChangedAt` timestamps).
 - Use small OTP expiry times to reduce security risks. eg. 5 minutes.
 - Implement rate limiting to prevent brute-force attacks.
+- Use an HMAC function (e.g., SHA256) instead of directly appending OTP to the secret key.
+
+  ```ts
+  import crypto from 'crypto'
+
+  function getSecretKey(baseSecret: string, otp: string): string {
+    return crypto.createHmac('sha256', baseSecret).update(otp).digest('hex')
+  }
+
+  const secretKey = getSecretKey(SERVER_REGISTER_SECRET, OTP)
+  ```
 
 This approach secures registration and password reset flows while avoiding persistent OTP storage.
+
+## Limitations
+
+- Handle Token Expiration: If a registration/reset password token is created multiple times, previous tokens and OTPs will still be valid until they expire.
+- Can be more complex for crazy tasks: This method can be difficult to integrate with other OTP management systems. Invalidating previous tokens would require additional tracking mechanisms like `lastAccessedAt`, which can add complexity.
+- No Centralized OTP Tracking: Since OTPs are not stored in a database, there is no way to manually revoke or track OTP usage.
+- Limited Token Expiry Control: JWTs are stateless, meaning once issued, they cannot be revoked unless additional tracking (like blacklistedTokens or lastAccessedAt) is implemented.
+- Potential Synchronization Issues: If multiple OTP requests are made in quick succession, users might enter an older OTP, leading to failed verification. Even thought this is impractical, it is still a possibility.
+- No Multi-Factor Authentication (MFA): This approach only relies on OTP for verification, which might not be sufficient for extremely high-security applications.
