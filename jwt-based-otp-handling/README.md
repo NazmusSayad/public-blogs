@@ -1,4 +1,4 @@
-# JWT-Based OTP Authentication Theory
+# JWT-Based OTP Authentication
 
 ## Overview
 
