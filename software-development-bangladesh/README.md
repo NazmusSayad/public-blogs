@@ -1,6 +1,6 @@
 
 
-# Software Development in Bangladesh is so demotivating
+# Software Development in Bangladesh is demotivating
 
 ## What's wrong?
 
