@@ -1,4 +1,4 @@
-# Secure JWT-Based OTP Authentication
+# Secure JWT-Based OTP Authentication Handling
 
 ## Overview
 
