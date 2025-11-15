@@ -39,8 +39,6 @@ What are the popular influencers on social media platforms doing who are really 
 
 ### Comparing with others?
 
-<img width="400" alt="image" src="https://github.com/user-attachments/assets/c695d4d3-1134-48c2-883f-472ea39e46e2" />
-
 [A woman](https://www.sarasoueidan.com) covered with a so-called black trash bag living in a so-called terrorist-controlled country is talking about web accessibility in the international spaces, and Bangladeshi people whose voices are getting called in the NYC mayor election are selling courses; that's all they can do.
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/6061e7eb-f377-465a-a9f8-3eb125969d2a" />
