@@ -16,7 +16,7 @@ As a web-focused developer, I have seen lots of UI library talks in the web comm
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/98129708-2cca-4e47-84c5-f6a4c104da60" />
 
-This is the source code of the most popular somewhat production grade UI library made by Bangladeshi developers. there is literally a `src` folder inside the `app` folder inside Next.js, which isn't a page... Like wtf!
+This is the source code of the most popular somewhat production grade UI library made by Bangladeshi developers. there is literally a src folder inside the app folder inside Next.js, which isn't a page... Like wtf!
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/c2598fe6-92e2-41d8-b3da-05e76282253d" />
 
